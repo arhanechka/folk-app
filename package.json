@@ -1,0 +1,23 @@
+{
+  "name": "folk-server",
+  "version": "1.0.0",
+  "description": "The simple server for collection of ukrainian folk music",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arhanechka/folk-app-server.git"
+  },
+  "keywords": [
+    "folk"
+  ],
+  "author": "@arhanechka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arhanechka/folk-app-server/issues"
+  },
+  "homepage": "https://github.com/arhanechka/folk-app-server#readme"
+}
