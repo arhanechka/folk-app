@@ -3,7 +3,4 @@ const db = {
 
 }
 
-const ver = {
-    haha: "sdasdwd"
-}
-module.exports={db, ver};
+module.exports={db};
