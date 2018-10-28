@@ -4,7 +4,7 @@
   "description": "The simple server for collection of ukrainian folk music",
   "main": "index.js",
   "scripts": {
-    "dev":  "node app.js" 
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/arhanechka/folk-app-server#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5"
   }
 }

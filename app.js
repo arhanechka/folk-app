@@ -1,6 +1,21 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const bodyParser     = require('body-parser');
+const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+require('./db')();
+require('./routes')(app, {});
+
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+}
+
+app.use(allowCrossDomain);
 
 const user = {name: "Ann", status: "master"};
 const data = {name: "Folk", type: "audio", region: "Kiev"};
@@ -34,6 +49,6 @@ app.get('/audio', (req, res)=>{
         
     })
 
-app.listen(port, ()=>{
+    app.listen(port, ()=>{
     console.log("Server connected!")  
 })
